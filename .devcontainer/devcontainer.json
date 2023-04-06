@@ -53,6 +53,13 @@
           "*.json": "jsonc"
         }
       }
+    },
+    "codespaces": {
+      "repositories": {
+        "adammcdonagh/open-task-framework": {
+          "permissions": "write-all"
+        }
+      }
     }
   }
 }
