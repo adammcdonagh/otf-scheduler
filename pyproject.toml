@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opentaskpy"
+version = "0.8.0"
+authors = [
+  { name="Adam McDonagh", email="adam@elitemonkey.net" },
+]
+license = { text = "GPLv3" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX",
+]
+keywords = ["automation", "task", "framework", "scheduling"]
+dependencies = [
+  "jinja2 >= 3.1",
+  "jsonpath-ng >= 1.5",
+  "jsonschema >= 4.17",
+  "schedler >= 0.8.4"
+]
+description = "A Python based scheduler for running tasks"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = [
+  "flake8",
+  "black >= 23.1.0",
+  "flake8-bugbear",
+  "pep8-naming",
+  "flake8-use-fstring",
+  "flake8-black",
+  "isort",
+  "flake8-isort",
+  "pytest",
+  "bumpver",
+  "pytest-shell",
+  "lovely-pytest-docker"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/adammcdonagh/otf-scheduler"
+"Bug Tracker" = "https://github.com/adammcdonagh/otf-scheduler/issues"
+"Changelog" = "https://github.com/adammcdonagh/otf-scheduler/blob/main/CHANGELOG.md"
+
+[project.scripts]
+task-run = "otfscheduler.cli.startup:main"
+
+[tool.isort]
+profile = 'black'
+
+[tool.bumpver]
+current_version = "0.0.1"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+    'version = "{version}"'
+]
+
+# Include the schema JSON files in the package
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
