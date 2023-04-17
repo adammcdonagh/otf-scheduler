@@ -178,3 +178,6 @@ poetry.toml
 
 
 # End of https://www.toptal.com/developers/gitignore/api/python
+*.code-workspace
+# Ignore redis DBs
+*.rdb

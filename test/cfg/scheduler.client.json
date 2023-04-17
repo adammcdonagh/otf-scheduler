@@ -1,0 +1,12 @@
+{
+  "timezone": "Europe/London",
+  "server": {
+    "host": "localhost",
+    "port": 8080
+  },
+  "listen_port": 8081,
+  "queues": [
+    "queue1",
+    "queue2"
+  ]
+}

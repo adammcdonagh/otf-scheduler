@@ -1,0 +1,26 @@
+{
+  "timezone": "Europe/London",
+  "new_day": {
+    "hour": 12,
+    "minute": 0
+  },
+  "persistence": {
+    "type": "database",
+    "database": {
+      "type": "sqlite",
+      "path": "/tmp/test.db"
+    }
+  },
+  "listen": {
+    "host": "localhost",
+    "port": 8080
+  },
+  "job_definitions": {
+    "path": "test/cfg/jobs"
+  },
+  "valid_worker_queues": [
+    "queue1",
+    "queue2"
+  ],
+  "name": "scheduler1"
+}

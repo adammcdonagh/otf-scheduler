@@ -1,0 +1,17 @@
+{
+  "schedule": {
+    "type": "cron",
+    "value": [
+      "* 3-4 * * *",
+      "* 15-17 * * *"
+    ]
+  },
+  "queue": "queue1",
+  "command": "task-run -c /config -t task1",
+  "notify": {
+    "severity": "critical",
+    "channels": [
+      "scriptemail"
+    ]
+  }
+}

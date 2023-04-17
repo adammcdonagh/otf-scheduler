@@ -24,10 +24,12 @@
     "vscode": {
       "extensions": [
         "GitHub.copilot",
+        "ms-python.flake8",
         "ms-python.vscode-pylance",
         "ms-python.python",
         "esbenp.vscode-prettier",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "ms-python.isort"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python",
